@@ -23,3 +23,11 @@ Starting at the top of `OCCO.in` we have:
 
 `fix`, there are many fixes and they have many applications but the most common is for thermostating. In `OCCO.in` a Nosé-Hoover thermostat is used with a coupling constant of $200 ps^{-1}$.
 
+`compute`, this is how we tell `LAMMPS` to calculate somthing for us. This is how we do on the fly calculations, but we can also have these at the end of an `input` script (after `run`) to do some post processing.
+
+`thermo_style` and `thermo`, define the infomation to be printed to the simulation log (this goes to screen and file) and how often.
+
+`run`, this is the big boy, this tell `LAMMPS` to actauly run the simulation, with everything you set up above.
+
+`write_data`, this is generally the final step, this prints a new `data` file with the conforation of the atoms on the last step.
+
