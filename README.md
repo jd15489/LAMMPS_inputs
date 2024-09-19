@@ -23,16 +23,14 @@ The input script can have a multitude of command within it but some of the stand
 - `run`
 - `write_data`
 
-Let us first talk about `read_data`
-Now we need a data file.
-We can start by using LipParGen to create the molecule and forcefield we need. 
+Let us first talk about `read_data`; to start we need a data file.
+We can use LipParGen to create a molecule and OPLS force field for it. 
 Let's use ethylene glycol as an example.
 
 Navigate to the [LigParGen server](https://zarbi.chem.yale.edu/ligpargen/) and input the SMILES string for ethylene glycol, `OCCO`, as the `input structure`. 
-Chooce the forcefeild you want (you can choose from two OPLS forcefields), and hit `submit molecule`.
-After a short wait (with fingers crossed) you should get a series of option including LAMMPS. 
+Choose the force field you want (you can choose from two OPLS forcefields), and hit `submit molecule`.
+After a short wait (with fingers crossed) you should get a series of options including `LAMMPS`. 
 Download the LAMMPS file, this is your `data` file. 
+I have put the output in this repo as `OCCO.data`.
 This `data` file holds the information about the simulation cell, the molecule and the forcefield that governs it, as well as some other stuff.
-
-There are a lot of different ways to get information into your `lammps` simulation, but the `data` field is the easiest to understand.
-The format of the `data` file is discussed here: [read_data](https://docs.lammps.org/read_data.html)
+I have written more about this in `data_file.md`.
