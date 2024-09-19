@@ -9,7 +9,20 @@ lmp -in script.in
 ```
 Where `lmp` is the compiled `LAMMPS` executable.
 
-Now we need a data file/
+The input script can have a multitude of command within it but some of the standard things you will need are:
+- `units`
+- `atom_style`
+- `read_data`
+- `bond`/`angle`/`dihedral`/`improper_style`
+- `timestep`
+- `dump`
+- `fix`
+- `thermo`
+- `run`
+- `write_data`
+
+Let us first talk about `read_data`
+Now we need a data file.
 We can start by using LipParGen to create the molecule and forcefield we need. 
 Let's use ethylene glycol as an example.
 
