@@ -17,6 +17,8 @@ Starting at the top of `OCCO.in` we have:
 
 `pair_style`, similarly this defines the style of the pair potentials defined in the `data` file.
 
+`kspace_style`, this is related to the pair_style. This defines the type of solver used for reciprocal calculation, examples include `particle-particle particle-mesh` and `ewald`. This will likely be the slowest part of your simulation. Any pair_style with `long` in the name with require the kspace solver.
+
 `read_data`, this allows you to specify the `data` file or files that should be read in. This is where corrdinates and force feilds can be defined. More info can be found in `data_file.md`.
 
 `timestep`, this defines the step size for the simulation.
