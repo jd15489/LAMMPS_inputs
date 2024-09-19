@@ -34,3 +34,12 @@ Download the LAMMPS file, this is your `data` file.
 I have put the output in this repo as `OCCO.data`.
 This `data` file holds the information about the simulation cell, the molecule and the forcefield that governs it, as well as some other stuff.
 I have written more about this in `data_file.md`.
+
+Taking `OCCO.in` and `OCCO.data` we can run a simulation of a single molecule of ethylene glycol with the command (as above): `lmp -in OCCO.in`.
+
+This should output several things:
+- `log.lammps`
+- `traj.atom`
+- `msd.msd`
+- `2000000.data`
+These are mostly self explainatory or I have explained them elsewhere in this repo.
