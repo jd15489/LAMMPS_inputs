@@ -21,5 +21,5 @@ Starting at the top of `OCCO.in` we have:
 
 `dump`, this is how we can export the trajectory from the simulation. `LAMMPS` has serveral preset formats for trajectories, but this can also be user defined.
 
-`fix`, there are many fixes and they have many applications but the most common is for thermostating. In `OCCO.in` a N\'ose
+`fix`, there are many fixes and they have many applications but the most common is for thermostating. In `OCCO.in` a Nosé-Hoover thermostat is used with a coupling constant of $200 ps^{-1}$.
 
