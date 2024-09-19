@@ -1,5 +1,7 @@
 # LAMMPS_inputs
 
+[`LAMMPS` Documentation](https://docs.lammps.org/Manual.html)
+
 A `LAMMPS` simulations is all build from a single file or script.
 This is known as the input script and often has the extension `.in` (although this is not required).
 The simplest way to run a `LAMMPS` input is to simply call it from the command line:
