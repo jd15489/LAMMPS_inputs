@@ -106,4 +106,4 @@ Angles
     13     13      4      3      8
     14     14      6      2      7
 ```
-We have 14 `angles`, the first of type 1 and goes between atoms 1, 2, and 3, with atom 2 at the centre (1-\hat2-3)
+We have 14 `angles`, the first of type 1 and goes between atoms 1, 2, and 3, with atom 2 at the centre (1-\hat{2}-3)
