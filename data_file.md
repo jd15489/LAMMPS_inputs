@@ -46,7 +46,7 @@ Masses
        9      1.008  
       10      1.008
 ```
-This should have `atom types` many entrys. As you can see, the quirk of LigParGen, the same `atom type` is defined multiple times.
+This should have `atom types` many entries. As you can see, the quirk of LigParGen, the same `atom type` is defined multiple times.
 
 This is followed by pair coeffs:
 Pair Coeffs 
@@ -62,6 +62,48 @@ Pair Coeffs
        9      0.030  2.5000000 
       10      0.000  0.0000000
 ```
-Again, one per `atom type`. These are your Lennard-Jones parameters $\sigma$ & $\epsilon$
+Again, one per `atom type`. These are your Lennard-Jones parameters $\sigma$ & $\epsilon$. These need to be mixed, the rules for this mixing can be defined in the `input` file.
 
+Okay, the next four sections are bonding coeffs. The types of bonds you are using can be defined in the `input` file. Read more about this in the [command reference](https://docs.lammps.org/commands_list.html)
 
+Thankfully we now get to the good stuff:
+```
+Atoms 
+
+     1      1      1 -0.60410000    1.000  1.00000  0.00000
+     2      1      2 -0.04280000   -0.429  1.00000  0.00000
+     3      1      3 0.00820000   -0.915  1.00000  1.44402
+     4      1      4 -0.58680000   -0.427  2.16294  2.11028
+     5      1      5 0.41730000    1.279  1.00118 -0.93269
+     6      1      6 0.08590000   -0.783  0.11210 -0.53102
+     7      1      7 0.08590000   -0.760  1.90409 -0.51957
+     8      1      8 0.10560000   -0.536  0.12666  1.98326
+     9      1      9 0.10560000   -2.007  1.00600  1.48933
+    10      1     10 0.42530000    0.529  2.18687  1.90264
+```
+This is where the atoms in the simulation are defined. They come with some proportes with are, in order: 
+id, molecule, type, charge, x, y, z
+The style here can be changed in the `input` file with the [atom_style](https://docs.lammps.org/atom_style.html) command.
+The number of entries here should equal `atoms` above.
+
+The last few sections define the bonds, what type they are, and what atoms they go between.
+We will use `angles` as an example:
+```
+Angles 
+
+     1      1      1      2      3
+     2      2      2      3      4
+     3      3      2      1      5
+     4      4      1      2      6
+     5      5      1      2      7
+     6      6      2      3      8
+     7      7      2      3      9
+     8      8      3      4     10
+     9      9      4      3      9
+    10     10      8      3      9
+    11     11      3      2      7
+    12     12      3      2      6
+    13     13      4      3      8
+    14     14      6      2      7
+```
+We have 14 `angles`, the first of type 1 and goes between atoms 1, 2, and 3, with atom 2 at the centre (1-\^2-3)
