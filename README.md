@@ -23,7 +23,7 @@ The input script can have a multitude of command within it but some of the stand
 - `run`
 - `write_data`
 
-Let us first talk about `read_data`; to start we need a data file.
+Let us first talk about `read_data` (I discuss the other commands in `input.md`); to start we need a data file.
 We can use LipParGen to create a molecule and OPLS force field for it. 
 Let's use ethylene glycol as an example.
 
