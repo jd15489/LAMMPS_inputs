@@ -41,5 +41,5 @@ This should output several things:
 - `log.lammps`
 - `traj.atom`
 - `msd.msd`
-- `2000000.data`
+- `20000.data`
 These are mostly self explainatory or I have explained them elsewhere in this repo.
