@@ -6,6 +6,10 @@ angle_style    harmonic
 dihedral_style opls
 improper_style cvff
 
+pair_style lj/cut/coul/long 5
+
+kspace_style pppm 1e-6
+
 read_data OCCO.data
 
 timestep 0.5
@@ -17,7 +21,7 @@ fix nvt all nvt temp 300 300 200
 fix recenter all recenter INIT INIT INIT
 
 compute msd all msd
-fix msd all ave/time 2000 1 2000 c_msd[*] file msd.msd mode vector
+fix msd all ave/time 2000 1 2000 c_msd file msd.msd mode vector
 
 thermo_style one
 thermo 2000
