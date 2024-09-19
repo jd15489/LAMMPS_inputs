@@ -26,6 +26,6 @@ fix msd all ave/time 2000 1 2000 c_msd file msd.msd mode vector
 thermo_style one
 thermo 2000
 
-run 2000000
+run 20000
 
 write_data *.data
